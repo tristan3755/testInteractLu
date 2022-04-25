@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&family=Roboto:wght@300&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #05c46b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    animation: colorChange linear infinite 5s;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #ffc048;
+    }
+
+    25% {
+        background-color: #ff3f34;
+    }
+
+    50% {
+        background-color: #f53b57;
+    }
+
+    75% {
+        background-color: #ffd32a;
+    }
+
+    100% {
+        background-color: #ffc048;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    display: flex;
+    flex-direction: row;
+    font-family: 'EB Garamond', serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 4rem;
+    text-align: center;
+    max-width: 800px;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
+h1:hover {
+    cursor: pointer;
+    max-width: 1000px;
+}
+
+h1:hover:before,
+h1:hover:after {
+    width: 10vw;
+}
+
+p {
+    max-width: 700px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+h1::before {
+    transition: ease-in-out 0.5s;
+    width: 5vw;
+    background-color: white;
+    height: 1px;
+    content: '';
+    margin: auto;
+    margin-right: 2.5rem;
+}
+
+h1::after {
+    transition: ease-in-out 0.5s;
+    width: 5vw;
+    background-color: white;
+    height: 1px;
+    content: '';
+    margin: auto;
+    margin-left: 2.5rem;
+}
